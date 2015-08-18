@@ -1,0 +1,57 @@
+From admin at berlios.de  Wed Jun  8 17:06:10 2011
+From: admin at berlios.de (admin at berlios.de)
+Date: Wed, 8 Jun 2011 23:06:10 +0800 (HKT)
+Subject: [StatCvs-XML-tracker] [Bug #18159] commit log encoding issue
+Message-ID: <201106081506.p58F6AYM003033@unicorn.berlios.de>
+
+Bug #18159, was updated on 2011-Jun-08 23:06
+Here is a current snapshot of the bug.
+
+Project: StatCvs-XML - enhanced CVS statistics
+Category: statcvs-xml
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: jcnam
+Assigned to : none
+Summary: commit log encoding issue
+
+Details: Today, I've used statsvn to generate a xml report and got an crash (please, see below about the crash).
+
+I send this issue to statsvn usergroup and got an reply:
+[...] but it would appear that one of your commit messages includes <![CDATA[ .... ]]> in the message. Can you try manually removing it from the log file before running StatSVN? (simply remove that message with a text editor). 
+
+If that works, it is probably a bug due to StatCVS-XML not encoding parameters when writing the output XML. Feel free to publish that bug to the StatCVS (not StatSVN as this code is in the other project) issue tracker [...]
+
+====Stack traces
+
+
+Syntax:
+
+<replace file="foo.txt">
+     <replacetoken><![CDATA[I am a
+multiline
+token]]></replacetoken>
+     <replacevalue><![CDATA[I am a
+multiline
+value]]></replacevalue>
+</replace>
+
+" is not legal for a JDOM CDATA section: CDATA cannot internally contain a CDATA ending delimiter (]]>).
+        at org.jdom.CDATA.setText(CDATA.java:121)
+        at org.jdom.CDATA.<init>(CDATA.java:95)
+        at net.sf.statcvs.pages.xml.CommitListXml.renderCommit(CommitListXml.java:87)
+        at net.sf.statcvs.pages.xml.CommitListXml.renderCommitList(CommitListXml.java:65)
+        at net.sf.statcvs.pages.xml.LogXmlMaker.toFile(LogXmlMaker.java:61)
+        at net.sf.statcvs.pages.xml.LogXml.toFile(LogXml.java:48)
+        at net.sf.statcvs.pages.xml.GenerateXml.generate(GenerateXml.java:111)
+        at net.sf.statcvs.pages.ReportSuiteMaker.toXml(ReportSuiteMaker.java:72)
+        at net.sf.statsvn.Main.generateDefaultHTMLSuite(Main.java:327)
+        at net.sf.statsvn.Main.generate(Main.java:116)
+        at net.sf.statsvn.Main.main(Main.java:80)
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=18159&group_id=872
+
+

@@ -1,0 +1,75 @@
+From admin at berlios.de  Sun Mar 18 12:13:18 2007
+From: admin at berlios.de (admin at berlios.de)
+Date: Sun, 18 Mar 2007 12:13:18 +0100 (CET)
+Subject: [StatCvs-XML-tracker] [Patch #1765] weburl support
+Message-ID: <200703181113.l2IBDIHK025443@unicorn.berlios.de>
+
+Patch #1765 has been updated. 
+
+Project: statcvs-xml
+Category: maven-statcvs-plugin (maven 2)
+Status: Open
+Submitted by: hboutemy
+Assigned to : nickveys
+Summary: weburl support
+
+Follow-Ups:
+
+Date: 2007-Mar-18 12:13
+By: hboutemy
+
+Comment:
+Since Source Forge changed their CVS infrastructure on 2006-05-24 (see https://sourceforge.net/forum/forum.php?forum_id=575039), StatCVS can't automatically detect the weburl type any more.
+
+This patch permits me to add:
+          <webUrlType>viewcvs</webUrlType>
+in my configuration, which helps StatCVS generate links to my project like it worked before.
+-------------------------------------------------------
+
+-------------------------------------------------------
+For more info, visit:
+
+http://developer.berlios.de/patch/?func=detailpatch&patch_id=1765&group_id=872
+
+
+From admin at berlios.de  Sun Mar 18 19:19:41 2007
+From: admin at berlios.de (admin at berlios.de)
+Date: Sun, 18 Mar 2007 19:19:41 +0100 (CET)
+Subject: [StatCvs-XML-tracker] [Patch #1765] weburl support
+Message-ID: <200703181819.l2IIJfLC002860@unicorn.berlios.de>
+
+Patch #1765 has been updated. 
+
+Project: statcvs-xml
+Category: maven-statcvs-plugin (maven 2)
+Status: Closed
+Submitted by: hboutemy
+Assigned to : squig
+Summary: weburl support
+
+Follow-Ups:
+
+Date: 2007-Mar-18 19:19
+By: squig
+
+Comment:
+Committed patch to CVS.
+-------------------------------------------------------
+
+Date: 2007-Mar-18 12:13
+By: hboutemy
+
+Comment:
+Since Source Forge changed their CVS infrastructure on 2006-05-24 (see https://sourceforge.net/forum/forum.php?forum_id=575039), StatCVS can't automatically detect the weburl type any more.
+
+This patch permits me to add:
+          <webUrlType>viewcvs</webUrlType>
+in my configuration, which helps StatCVS generate links to my project like it worked before.
+-------------------------------------------------------
+
+-------------------------------------------------------
+For more info, visit:
+
+http://developer.berlios.de/patch/?func=detailpatch&patch_id=1765&group_id=872
+
+

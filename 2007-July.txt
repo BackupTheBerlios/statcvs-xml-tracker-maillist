@@ -1,0 +1,64 @@
+From admin at berlios.de  Mon Jul 16 18:29:51 2007
+From: admin at berlios.de (admin at berlios.de)
+Date: Mon, 16 Jul 2007 12:29:51 -0400 (EDT)
+Subject: [StatCvs-XML-tracker] [Bug #11568] Log parsing error
+Message-ID: <200707161629.l6GGTpN0013667@unicorn.berlios.de>
+
+Bug #11568, was updated on 2007-Jul-16 12:29
+Here is a current snapshot of the bug.
+
+Project: StatCvs-XML - enhanced CVS statistics
+Category: maven-statcvs-plugin (maven 2)
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: wordman
+Assigned to : none
+Summary: Log parsing error
+
+Details: Using the Maven 2 plugin (v 3.0) with Maven 2.0.7, I get the following messages:
+
+[INFO] Parsing CVS log '/export/scratch/workspace/gerund/target/statcvs/cvs.log'
+[INFO] Logfile parsing failed.
+[INFO] Expected '?' or empty line at line 11, but found '-f server: cannot open /root/.cvsignore: Permission denied'
+
+These seem to (correctly) be info messages but (incorrectly) appear to make the entire parse fail.
+
+If I run the same log manually using statcvs-xml-0.9.7-full.jar, same result: error is seen and the process dies.
+
+If I generate a cvs log manually, however, (using cvs log > cvs.log) the '-f server: cannot open /root/.cvsignore: Permission denied' line is dumped to stderr, so doesn't show up in the log.
+
+My guess is that something in the plugin is incorrectly directing errors into the log file on generation. Oddly, only some of the stderr lines show up there. For example, none of the "-f server: Logging" lines appears in /export/scratch/workspace/gerund/target/statcvs/cvs.log.
+
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=11568&group_id=872
+
+
+From admin at berlios.de  Mon Jul 16 18:36:17 2007
+From: admin at berlios.de (admin at berlios.de)
+Date: Mon, 16 Jul 2007 12:36:17 -0400 (EDT)
+Subject: [StatCvs-XML-tracker] [Bug #11569] No way to control heap size of
+	forked process
+Message-ID: <200707161636.l6GGaHcB027036@unicorn.berlios.de>
+
+Bug #11569, was updated on 2007-Jul-16 12:36
+Here is a current snapshot of the bug.
+
+Project: StatCvs-XML - enhanced CVS statistics
+Category: maven-statcvs-plugin (maven 2)
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: wordman
+Assigned to : none
+Summary: No way to control heap size of forked process
+
+Details: We have a project with a huge CVS history. Running the maven 2 plugin (3.0) with Maven 2.0.7 runs out of heap space. There doesn't appear to be any way to set how much space to give the statcvs process when it is forked off.
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=11569&group_id=872
+
+

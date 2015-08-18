@@ -1,0 +1,42 @@
+From admin at berlios.de  Wed Dec 27 19:34:51 2006
+From: admin at berlios.de (admin at berlios.de)
+Date: Wed, 27 Dec 2006 19:34:51 +0100 (CET)
+Subject: [StatCvs-XML-tracker] [Patch #1765] weburl support
+Message-ID: <200612271834.kBRIYplL018667@unicorn.berlios.de>
+
+Patch #1765 has been updated. 
+
+Project: statcvs-xml
+Category: maven-statcvs-plugin (maven 2)
+Status: Open
+Submitted by: hboutemy
+Assigned to : none
+Summary: weburl support
+
+-------------------------------------------------------
+For more info, visit:
+
+http://developer.berlios.de/patch/?func=detailpatch&patch_id=1765&group_id=872
+
+
+From admin at berlios.de  Thu Dec 28 03:38:15 2006
+From: admin at berlios.de (admin at berlios.de)
+Date: Wed, 27 Dec 2006 20:38:15 -0600 (CST)
+Subject: [StatCvs-XML-tracker] [Patch #1765] weburl support
+Message-ID: <200612280238.kBS2cFFp013011@unicorn.berlios.de>
+
+Patch #1765 has been updated. 
+
+Project: statcvs-xml
+Category: maven-statcvs-plugin (maven 2)
+Status: Open
+Submitted by: hboutemy
+Assigned to : nickveys
+Summary: weburl support
+
+-------------------------------------------------------
+For more info, visit:
+
+http://developer.berlios.de/patch/?func=detailpatch&patch_id=1765&group_id=872
+
+
